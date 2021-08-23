@@ -1,0 +1,142 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Aboutrika website">
+  <meta name="keywords" content="mohammed aboutrika, aboutrika,ABOUTRIKA,Mohamed_Aboutrika">
+  <meta name="auther" content="Ahmed Elnagar">
+  <title>ABOUTRIKA</title>
+  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- adding logo amd logo name -->
+      <div class="block">
+        <div class="left">
+          <a href="/">
+            <img id="img-logo" src="/css/img/header/logo.png"  alt="logo">
+          </a>
+        </div>
+        <div class="left">
+          <a id="txt-logo" style="text-decoration: none; color: white;" href="index.html">
+            <h1> ABOUTRIKA </h1>
+          </a>
+        </div>
+      </div>
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list">
+      </ul>
+    </nav>
+  </header>
+  <section class="main__hero" data-nav="HOME" id="home">
+    <div id="herobg">
+    </div>
+    <div id="icon-social">
+      <div class="icon-social"><a href="https://www.facebook.com/trikaofficial"  target="blank"><img class="icon-size"
+            src="/css/img/header/ic-face1.png" alt="Facebook"></a></div>
+      <div class="icon-social"><a href="https://twitter.com/trikaofficial"  target="_blank"><img class="icon-size"
+            src="/css/img/header/ic-twit1.png" alt="Twiter"></a></div>
+      <div class="icon-social"><a href="https://www.instagram.com/aboutrikamohammed/"  target="_blank"><img class="icon-size"
+            src="/css/img/header/ic-utube1.png" alt="Youtube"></a></div>
+      <div class="icon-social"><a href="https://www.instagram.com/aboutrikamohammed/"  target="_blank"><img class="icon-size"
+            src="/css/img/header/ic-insta1.png" alt="Instagram"></a></div>
+    </div>
+    <!-- <h1>Landing Page </h1> -->
+  </section>
+  <main>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="ABOUT">
+      <div class="landing__container">
+        <h2>ABOUT</h2>
+          <p> <B>Mohamed Aboutrika</B> (born 7 November 1978) is an Egyptian retired professional footballer who played as
+          an attacking midfielder and a forward. He is often considered the best Egyptian player in history and is widely
+          regarded as one of the greatest African footballers of all time. He also came second in the African Footballer of the
+          Year award in 2008 after Emmanuel Adebayor, and was one of five nominees for the 2006 award, and one of the ten
+          nominated for the 2013 award.</p>
+          <p> <b>Aboutrika won the African Cup of Nations</b> in 2006 with the Egyptian national team. He also scored the
+            winning goal to help Egypt win the 2008 Africa Cup of Nations. He helped his club Al Ahly to win the bronze medal in
+            the FIFA Club World Cup in 2006.</p>
+          <p><b>2004 Debut Season with Al Ahly</b> In the first half of Egyptian league 2003–2004, Aboutrika scored 3
+            goals for Tersana. In January 2004, he was offered a position in Egypt's and Africa's top football team, Al Ahly. He
+            scored 11 goals in his first and only 13 appearances with Al Ahly in 2003–2004 league, coming in the second place
+            between top scorers in the Egyptian League with 14 goals. </p>
+          <p><b>Aboutrika's efforts with Ahly</b> led to attention from the Egyptian national team, and he started the
+            game against Trinidad and Tobago in a friendly match before the World Cup 2006 qualifiers on 31 March 2004 in Arab
+            Contractors Stadium. The first starting game for Aboutrika ended 2–1 for the Egyptians. He started as an attacker,
+            but was found to play better when he played his normal position behind the attackers in the midfield position.
+            Aboutrika scored his first national goal in this game. He scored 5 goals in his first 6 appearances with Egypt in
+            2004 and 2005.</p>
+      </div>
+    </section>
+    <section id="section2" data-nav="Section 2">
+      <div class="landing__container">
+        <h2>Section 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+          semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section3" data-nav="Section 3" class="active-section">
+      <div class="landing__container">
+        <h2>Section 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+          semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section4" data-nav="Section 4">
+      <div class="landing__container">
+        <h2>Section 4</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+          semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+  </main>
+  <div id="up">
+    <a href="#home">
+      <div id="up2">^</div>
+    </a>
+  </div>
+  <footer class="page__footer">
+    <p>Developed by <a href="https://www.facebook.com/ahmedashrafelnagar7" target="_blank"><b>Ahmed Elnagar</b></a> &copy Udacity</p>
+  </footer>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>

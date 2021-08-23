@@ -1,0 +1,392 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+/* ---- Base Rules ---- */
+body {
+  background-image: url(/css/img/bga.png);
+  margin: 0;
+  font-family: calibri /* "Merriweather", serif */;
+  color: #333;
+}
+
+.left {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Typeography General*/
+h1 {
+  font-family: calibri /* , "Fira Sans", sans-serif */;
+  font-size: 3em;
+  margin: 2em 1rem;
+}
+
+h2 {
+  border-bottom: 1px solid #ffaf00;
+  font-family: "Oxygen", Sans-Serif;
+  font-size: 3em;
+  color: #333;
+}
+
+p {
+  line-height: 1.6em;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+/* ---- Layout Rules ---- */
+main {
+  margin: 0vh 1em 10vh;
+}
+
+section {
+  position: relative;
+}
+
+/* ---- Module Rules ---- */
+
+/* ----------header----------*/
+
+/* Navigation Styles*/
+/* adding logo img and text */
+#img-logo {
+  padding-left: 0.625rem;
+  padding-top: 0.34rem;
+  width: 30px;
+}
+
+  #text-logo{
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+  }
+
+a h1 {
+  font-family: Calibri;
+  font-size: 1.3rem;
+  margin: 0px;
+  margin-top: 0.8rem;
+}
+
+.menu-mobile span {
+  float: right;
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: white;
+}
+
+.navbar__menu ul {
+  padding: 0;
+  margin: 0 auto;
+  text-align: right;
+  font-size: small;
+}
+
+nav {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.navbar__menu li {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.navbar__menu .menu__link {
+  /* display: block; */
+  padding: 1.36em 1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar__menu .menu__link:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(66, 3, 3);
+  transition: ease 0.3s all;
+}
+
+/* active link style */
+.active-section-li {
+  background: rgba(255, 255, 255, 0.24);
+  color: #fcbc32fa !important;
+}
+
+/* main Header Styles */
+.page__header {
+  background-image: url(/css/img/header/bg-nav.png);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3.125rem;
+  z-index: 5;
+}
+
+/*    hero     */
+.main-hero {
+  margin-top: 60px;
+}
+
+#herobg {
+  background-image: url(/css/img/header/Hero-img-bg.png);
+  background-position: center;
+  height: 500px;
+  margin-top: 3vh;
+}
+
+/* social media icon */
+#icon-social {
+  display: table;
+  margin: auto;
+}
+.icon-social {
+  display: inline-flex;
+  margin: -5.25rem 0 auto;
+}
+
+.icon-size {
+  width: 60px;
+}
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+  padding: 1em;
+  text-align: left;
+}
+
+section:nth-of-type(even) .landing__container {
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .landing__container::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.187);
+  position: absolute;
+  z-index: -5;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  top: 3em;
+  right: 3em;
+  z-index: -5;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -5;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+  content: "";
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+  right: 20vw;
+  bottom: -5em;
+  z-index: -5;
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease 0.5s all;
+}
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: active-section class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.active-section {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+section.active-section .landing__container::before {
+  opacity: 1;
+  animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.active-section .landing__container::after {
+  opacity: 1;
+  animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate(-1em) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-1em) rotate(-360deg);
+  }
+}
+
+/*  responsive by width  */
+@media only screen and (min-width: 44.1em) {
+  h1 {
+    font-size: 7em;
+    margin: 2em 4rem 1em;
+  }
+
+  /* #herobg{
+    margin-top: 7vh;
+  } */
+
+  .landing__container {
+    max-width: 50em;
+    padding: 4em;
+  }
+
+  .navbar__menu ul {
+    font-size: inherit;
+  }
+
+  .navbar__menu .menu__link {
+    padding: 0.96em;
+  }
+
+  .icon-size {
+    width: 70px;
+  }
+}
+
+@media only screen and (max-width: 33.75em){
+  .page__header{
+    height: 3.5rem;
+  }
+  
+  .left{
+    clear: both;
+  }
+
+  .block{
+      display: flex;
+      justify-content:center;
+  }
+
+  #img-logo{
+    width: 25px;
+    padding-top: 0.34rem;
+  }
+  
+  a h1 {
+    font-size: 1em;
+    margin-top: 0.8rem;
+    color:#fff;
+  }
+
+  .navbar__menu .menu__link{
+    padding: 0.2em 1em;
+    margin-top: -0.2em;
+  }
+
+  .navbar__menu ul{
+    text-align: center;
+  }
+
+  .active-section-li {
+    background: rgba(255, 255, 255, 0.24);
+    color: #fcbc32fa !important;
+}
+}
+
+@media only screen and (max-width: 23.25em){
+  .navbar__menu .menu__link{
+    padding: 0.2em 0.56em;
+  }
+}
+
+@media only screen and (max-width: 19.5em){
+  .navbar__menu ul {
+    font-size: xx-small;
+  }
+}
+/* go to top button  */
+#up {
+  position: fixed;
+  top: 90%;
+  right: 3%;
+  transform: translate(0%, -50%);
+  background-color: #161616;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: inline-block;
+}
+
+#up2 {
+  font-size: 24px;
+  padding-top: 8px;
+  color: #ffaf00;
+  cursor: pointer;
+}
+
+/* ----------footer---------- */
+.page__footer {
+  background-image: url(/css/img/footer/bg.png);
+  height: 50px;
+  text-align: center;
+  padding-top: 0.01em;
+}
+
+.page__footer p {
+  color: #fff;
+}
